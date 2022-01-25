@@ -1,0 +1,198 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+.parent{
+    width:100%;
+    height:100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.397),rgba(0,0,0, 0.397)) ,url(images/background.png);
+    background-position: center;
+    background-size: cover;
+    padding:0 8%;
+
+}
+nav .logo{
+
+    width:140px
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: 0.5s;
+    line-height: 80px;
+
+   
+}
+
+ul{
+    display:flex;
+    flex-wrap: wrap;
+
+}
+
+ul li{
+    list-style:none;
+  
+}
+
+ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-size:23px;
+    font-weight: 400;
+    font-family: 'Poppins'; 
+    margin-right:25px; 
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+   
+}
+
+ul li a::after{
+    content: '';
+    position: absolute;
+    background-color:#fff;
+    left:50%;
+    bottom:-5px;
+    width:0;
+    height:3px;
+    transition: width 0.5s ;
+    transform: translate(-50%);
+}
+
+a:hover::after{
+    width:100%;
+}
+
+a:hover{
+    color:rgba(16, 135, 190, 0.863)
+}
+
+@media screen and (max-width:767px) {
+
+  
+    nav .logo{
+
+        width:100px;
+    }
+
+    nav ul li a{
+
+        font-size: 20px;
+
+    }
+
+
+    
+
+}
+
+
+
+.text-box{
+
+    position: absolute;
+    bottom: 8%;
+    font-family: 'Poppins';
+    color:#fff;
+    
+
+}
+
+.text-box p{
+   font-size: 50px;
+   font-weight: 500;
+}
+
+.text-box h1{
+    font-size: 200px;
+    line-height: 160px;
+    margin-left: -10px;
+    color:transparent;
+    -webkit-text-stroke: 1px #fff ;
+    background-image: url(images/back.png);
+    -webkit-background-clip: text;
+     animation: back 20s linear infinite;
+    transition: 0.5s;
+  
+}
+
+@media screen and (max-width:900px) {
+
+    .text-box h1{
+             line-height:100px;
+            font-size: 100px;
+    }
+    .row span{
+        padding-top:10px;
+    }
+
+    .row a span{
+        display:none;
+    }
+}
+.text-box h2{
+    font-size: 40px;
+    font-weight: 500;
+    
+}
+
+@media screen and (max-width:760px) {
+
+    .text-box h2{
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+}
+
+@keyframes back {
+
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+
+
+.text-box .row{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top:10p;
+}
+.row a{
+    color: #fff;
+    text-decoration:none;
+    padding:10px 20px;
+    margin-right:20px;
+    border:2px solid #fff;
+
+}
+.row a span{
+        font-weight: 500;
+        
+}
+
+
+.sc-icons{
+    position: absolute;
+    right:5%;
+    bottom: 8%;
+    
+}
+.sc-icons a{
+    margin-right:10px;
+}
+.sc-icons img{
+
+    width:25px;
+    display:block
+}
